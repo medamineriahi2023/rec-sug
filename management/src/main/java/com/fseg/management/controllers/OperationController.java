@@ -1,7 +1,6 @@
 package com.fseg.management.controllers;
 
 import com.fseg.management.dtos.OperationDTO;
-import com.fseg.management.dtos.ReactDTO;
 import com.fseg.management.services.ICrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,4 +28,16 @@ public class OperationController {
     public ResponseEntity<OperationDTO> save(@RequestBody OperationDTO operationDTO){
         return new ResponseEntity<>(service.save(operationDTO) , HttpStatus.CREATED);
     }
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Object> save(@PathVariable Long id){
+        service.delete(id);
+        return new ResponseEntity<>("Operation deleted successfully" , HttpStatus.NO_CONTENT);
+    }
+
+    @PutMapping(path = "/{id}")
+    public ResponseEntity<OperationDTO> update(@PathVariable OperationDTO operationDTO){
+        return new ResponseEntity<>(service.update(operationDTO) , HttpStatus.NO_CONTENT);
+    }
+
 }
