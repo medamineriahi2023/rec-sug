@@ -4,6 +4,8 @@ import com.fseg.management.dtos.ImageDTO;
 import com.fseg.management.entities.Image;
 import org.springframework.beans.BeanUtils;
 
+import java.util.List;
+
 public class ImageMapper {
 
     public static Image dtoToEntity(ImageDTO dto){
@@ -18,4 +20,15 @@ public class ImageMapper {
         BeanUtils.copyProperties(entity, imageDTO);
         return imageDTO;
     }
+
+    public static List<Image> getEntityList(List<ImageDTO> imageDTOS){
+        return imageDTOS.stream().map(ImageMapper::dtoToEntity).toList();
+    }
+
+    public static List<ImageDTO> getDtoList(List<Image> images){
+        return images.stream().map(ImageMapper::entityToDto).toList();
+    }
+
+
+
 }

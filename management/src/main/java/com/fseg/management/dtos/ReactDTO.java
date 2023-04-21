@@ -11,5 +11,8 @@ import lombok.Setter;
 public class ReactDTO {
     private Long id;
 
-    private String url;
+    private String userId;
+
+
+    private boolean reaction;
 }
