@@ -4,7 +4,6 @@ import com.fseg.management.dtos.ImageDTO;
 import com.fseg.management.entities.Image;
 import com.fseg.management.mappers.ImageMapper;
 import com.fseg.management.repository.ImageRepository;
-import com.fseg.management.services.ICrudService;
 import com.fseg.management.services.ImageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

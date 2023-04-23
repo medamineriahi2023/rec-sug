@@ -1,4 +1,4 @@
-package com.fseg.management.services;
+package com.fseg.management.services.abstracts;
 
 import java.util.List;
 

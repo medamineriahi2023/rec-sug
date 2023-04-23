@@ -4,7 +4,6 @@ import com.fseg.management.dtos.ReactDTO;
 import com.fseg.management.entities.React;
 import com.fseg.management.mappers.ReactMapper;
 import com.fseg.management.repository.ReactRepository;
-import com.fseg.management.services.ICrudService;
 import com.fseg.management.services.ReactService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

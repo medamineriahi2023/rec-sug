@@ -4,7 +4,6 @@ import com.fseg.management.dtos.OperationDTO;
 import com.fseg.management.entities.Operation;
 import com.fseg.management.mappers.OperationMapper;
 import com.fseg.management.repository.OperationsRepository;
-import com.fseg.management.services.ICrudService;
 import com.fseg.management.services.OperationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
