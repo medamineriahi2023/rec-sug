@@ -1,7 +1,7 @@
 package com.fseg.management.controllers;
 
 import com.fseg.management.dtos.OperationDTO;
-import com.fseg.management.services.ICrudService;
+import com.fseg.management.services.OperationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,30 +14,37 @@ import java.util.List;
 public class OperationController {
 
     @Autowired
-    private ICrudService<OperationDTO> service;
+    private OperationService operationService;
 
 
 
     @GetMapping
     public ResponseEntity<List<OperationDTO>> getAll(){
-        return new ResponseEntity<>(service.getAll() , HttpStatus.OK);
+        return new ResponseEntity<>(operationService.getAll() , HttpStatus.OK);
     }
 
 
     @PostMapping
     public ResponseEntity<OperationDTO> save(@RequestBody OperationDTO operationDTO){
-        return new ResponseEntity<>(service.save(operationDTO) , HttpStatus.CREATED);
+        return new ResponseEntity<>(operationService.save(operationDTO) , HttpStatus.CREATED);
     }
 
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<Object> save(@PathVariable Long id){
-        service.delete(id);
+        operationService.delete(id);
         return new ResponseEntity<>("Operation deleted successfully" , HttpStatus.NO_CONTENT);
     }
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<OperationDTO> update(@PathVariable OperationDTO operationDTO){
-        return new ResponseEntity<>(service.update(operationDTO) , HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(operationService.update(operationDTO) , HttpStatus.NO_CONTENT);
     }
+    //API TODO
+    //api react sur operation
+    // dislike operation
+    //comment operation
+    //update comment operation
+    //delete comment operation
+
 
 }

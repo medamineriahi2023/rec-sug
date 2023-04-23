@@ -1,7 +1,7 @@
 package com.fseg.management.controllers;
 
 import com.fseg.management.dtos.ImageDTO;
-import com.fseg.management.services.ICrudService;
+import com.fseg.management.services.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,18 +14,18 @@ import java.util.List;
 public class ImageController {
 
     @Autowired
-    private ICrudService<ImageDTO> service;
+    private ImageService imageService;
 
 
 
     @GetMapping
     public ResponseEntity<List<ImageDTO>> getAll(){
-        return new ResponseEntity<>(service.getAll() , HttpStatus.OK);
+        return new ResponseEntity<>(imageService.getAll() , HttpStatus.OK);
     }
 
 
     @PostMapping
     public ResponseEntity<ImageDTO> save(@RequestBody ImageDTO imageDTO){
-        return new ResponseEntity<>(service.save(imageDTO) , HttpStatus.CREATED);
+        return new ResponseEntity<>(imageService.save(imageDTO) , HttpStatus.CREATED);
     }
 }

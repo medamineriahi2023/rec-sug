@@ -1,14 +1,11 @@
 package com.fseg.management.services.impls;
 
-import com.fseg.management.dtos.ImageDTO;
 import com.fseg.management.dtos.OperationDTO;
-import com.fseg.management.entities.Image;
 import com.fseg.management.entities.Operation;
-import com.fseg.management.mappers.ImageMapper;
 import com.fseg.management.mappers.OperationMapper;
-import com.fseg.management.repository.ImageRepository;
 import com.fseg.management.repository.OperationsRepository;
 import com.fseg.management.services.ICrudService;
+import com.fseg.management.services.OperationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +13,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class OperationCrudServiceImp implements ICrudService<OperationDTO> {
+public class OperationServiceImp implements OperationService {
 
     private final OperationsRepository operationsRepository;
 
