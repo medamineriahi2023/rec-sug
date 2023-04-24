@@ -18,6 +18,7 @@ public class OperationMapper {
         operation.setStatus(dto.getStatus());
         operation.setImages(ImageMapper.getEntityList(dto.getImages()));
         operation.setReact(ReactMapper.getEntityList(dto.getReact()));
+        operation.setComments(CommentMapper.getEntityList(dto.getComments()));
         operation.setId(dto.getId());
         operation.setUserId(dto.getUserId());
          return operation;
@@ -31,6 +32,7 @@ public class OperationMapper {
         operationDTO.setStatus(entity.getStatus());
         operationDTO.setImages(ImageMapper.getDtoList(entity.getImages()));
         operationDTO.setReact(ReactMapper.getDtoList(entity.getReact()));
+        operationDTO.setComments(CommentMapper.getDtoList(entity.getComments()));
         operationDTO.setId(entity.getId());
         operationDTO.setUserId(entity.getUserId());
         return operationDTO;

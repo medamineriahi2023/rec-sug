@@ -34,5 +34,8 @@ public class Operation {
     @OneToMany(cascade = {CascadeType.PERSIST , CascadeType.REMOVE} , orphanRemoval = true)
     private List<Image> images;
 
+    @OneToMany(cascade = {CascadeType.PERSIST , CascadeType.REMOVE} , orphanRemoval = true)
+    private List<Comment> comments;
+
 
 }

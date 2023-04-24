@@ -42,7 +42,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public List getAll() {
-        return departmentRepository.findAll();
+    public List<DepartmentDto> getAll() {
+        return DepartmentMapper.getDtoList(departmentRepository.findAll());
     }
 }

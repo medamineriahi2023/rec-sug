@@ -24,4 +24,6 @@ public class OperationDTO {
     private List<ReactDTO> react ;
 
     private List<ImageDTO> images;
+
+    private List<CommentDto> comments;
 }
