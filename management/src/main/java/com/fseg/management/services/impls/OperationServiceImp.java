@@ -11,6 +11,7 @@ import com.fseg.management.repository.CommentRepository;
 import com.fseg.management.repository.OperationsRepository;
 import com.fseg.management.repository.ReactRepository;
 import com.fseg.management.services.OperationService;
+import com.fseg.management.services.UserService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,7 @@ public class OperationServiceImp implements OperationService {
     private final OperationsRepository operationsRepository;
     private final ReactRepository reactRepository;
     private final CommentRepository commentRepository;
+    private final UserService userService;
 
     @Override
     public OperationDTO save(OperationDTO dto) {
@@ -100,6 +102,7 @@ public class OperationServiceImp implements OperationService {
     public OperationDTO assignCommentToOperation(CommentDto comment, Long operationId) {
         Operation operation = operationsRepository.findById(operationId).orElseThrow();
         List<Comment> comments = operation.getComments();
+        comment.setUserName(userService.getUserNameById(comment.getUserId()));
         Comment comment1 = commentRepository.save(CommentMapper.dtoToEntity(comment));
         comments.add(comment1);
         operation.setComments(comments);

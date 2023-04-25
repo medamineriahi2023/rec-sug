@@ -19,6 +19,7 @@ public class CommentDto {
     private Long id;
     private String userId;
 
+    private String userName;
 
     private List<ImageDTO> images;
 

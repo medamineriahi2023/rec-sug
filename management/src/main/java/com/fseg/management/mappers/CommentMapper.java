@@ -18,6 +18,7 @@ public class CommentMapper {
         comment.setImages(ImageMapper.getEntityList(dto.getImages()));
         comment.setContent(dto.getContent());
         comment.setUserId(dto.getUserId());
+        comment.setUserName(dto.getUserName());
         return comment;
     }
 
@@ -28,6 +29,7 @@ public class CommentMapper {
         commentDto.setId(entity.getId());
         commentDto.setCreationDate(entity.getCreationDate());
         commentDto.setUserId(entity.getUserId());
+        commentDto.setUserName(entity.getUserName());
         if (entity.getImages() != null)
         commentDto.setImages(ImageMapper.getDtoList(entity.getImages()));
 

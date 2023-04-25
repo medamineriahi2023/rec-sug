@@ -23,6 +23,8 @@ public class Comment {
 
    private String content;
 
+   private String userName;
+
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "creation_date", nullable = false)
