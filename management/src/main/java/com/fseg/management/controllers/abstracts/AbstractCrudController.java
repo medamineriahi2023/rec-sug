@@ -2,6 +2,7 @@ package com.fseg.management.controllers.abstracts;
 
 import com.fseg.management.services.abstracts.ICrudService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,9 @@ public abstract class AbstractCrudController<T> {
 
     @GetMapping
     public ResponseEntity<List<T>> getAll(){
-        return new ResponseEntity<>(service.getAll() , HttpStatus.OK);
+        Sort sort = Sort.by("id").descending();
+        List<T> sortedList = service.getAll(sort);
+        return new ResponseEntity<>(sortedList, HttpStatus.OK);
     }
 
 
@@ -39,7 +42,7 @@ public abstract class AbstractCrudController<T> {
     }
 
     @PutMapping
-    public ResponseEntity<T> update(@PathVariable T dto){
+    public ResponseEntity<T> update(@RequestBody T dto){
         return new ResponseEntity<>(service.update(dto) , HttpStatus.OK);
     }
 

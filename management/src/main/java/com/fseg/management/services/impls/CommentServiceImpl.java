@@ -2,14 +2,12 @@ package com.fseg.management.services.impls;
 
 
 import com.fseg.management.dtos.CommentDto;
-import com.fseg.management.dtos.DepartmentDto;
 import com.fseg.management.entities.Comment;
-import com.fseg.management.entities.Department;
 import com.fseg.management.mappers.CommentMapper;
-import com.fseg.management.mappers.DepartmentMapper;
 import com.fseg.management.repository.CommentRepository;
 import com.fseg.management.services.CommentService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -46,7 +44,7 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public List<CommentDto> getAll() {
+    public List<CommentDto> getAll(Sort sort) {
         return CommentMapper.getDtoList(commentRepository.findAll());
     }
 }

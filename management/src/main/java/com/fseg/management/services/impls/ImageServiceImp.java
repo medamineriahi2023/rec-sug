@@ -6,6 +6,7 @@ import com.fseg.management.mappers.ImageMapper;
 import com.fseg.management.repository.ImageRepository;
 import com.fseg.management.services.ImageService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,7 +36,7 @@ public class ImageServiceImp implements ImageService {
     }
 
     @Override
-    public List<ImageDTO> getAll() {
+    public List<ImageDTO> getAll(Sort sort) {
         List<ImageDTO> imageDTOS = imageRepository.findAll().stream().map(ImageMapper::entityToDto).toList();
 
         return imageDTOS;

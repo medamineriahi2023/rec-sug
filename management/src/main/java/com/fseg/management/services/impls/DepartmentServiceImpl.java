@@ -7,6 +7,7 @@ import com.fseg.management.mappers.DepartmentMapper;
 import com.fseg.management.repository.DepartmentRepository;
 import com.fseg.management.services.DepartmentService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -42,7 +43,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public List<DepartmentDto> getAll() {
+    public List<DepartmentDto> getAll(Sort sort) {
         return DepartmentMapper.getDtoList(departmentRepository.findAll());
     }
 }

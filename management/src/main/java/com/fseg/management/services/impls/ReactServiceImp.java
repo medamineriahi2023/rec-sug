@@ -6,6 +6,7 @@ import com.fseg.management.mappers.ReactMapper;
 import com.fseg.management.repository.ReactRepository;
 import com.fseg.management.services.ReactService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,7 +37,7 @@ public class ReactServiceImp implements ReactService {
     }
 
     @Override
-    public List<ReactDTO> getAll() {
+    public List<ReactDTO> getAll(Sort sort) {
         return ReactMapper.getDtoList(reactRepository.findAll());
     }
 }

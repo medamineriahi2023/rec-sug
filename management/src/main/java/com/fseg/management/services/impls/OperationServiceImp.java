@@ -14,6 +14,7 @@ import com.fseg.management.services.OperationService;
 import com.fseg.management.services.UserService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,7 +48,7 @@ public class OperationServiceImp implements OperationService {
     }
 
     @Override
-    public List<OperationDTO> getAll() {
+    public List<OperationDTO> getAll(Sort sort) {
         List<OperationDTO> operationDTOS = operationsRepository.findAll().stream().map(OperationMapper::entityToDto).toList();
 
         return operationDTOS;
