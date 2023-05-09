@@ -1,9 +1,27 @@
 
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 w
 Gmanagement/src/main/java/com/fseg/management/services/ReactService.java,c/2/c2259eb63f16b31fb446341146f0f92ef200c8bd
-|
-Lmanagement/src/main/java/com/fseg/management/services/DepartmentService.java,2/c/2cb5d877ecfc6084e4cdce6d40ef0ff682940411
 w
 Gmanagement/src/main/java/com/fseg/management/services/ImageService.java,2/f/2f6a6b2f4f3154d26592b382cf59bf7fc730b734
+y
+Imanagement/src/main/java/com/fseg/management/mappers/OperationMapper.java,a/8/a891cb6b00f605e6039220b806d6e218af6601de
+Ñ
+Tmanagement/src/main/java/com/fseg/management/services/impls/OperationServiceImp.java,a/2/a2c87be2f018f3a6c915673f0b783c006b440832
+Ü
+Vmanagement/src/main/java/com/fseg/management/services/impls/DepartmentServiceImpl.java,5/0/500f18edf0c3423ab9decd0ed7bf7c6b84467b97
+Ä
+Pmanagement/src/main/java/com/fseg/management/services/impls/ImageServiceImp.java,d/7/d75bea8b601f9f7fb49bc5058b7af5aaacb2a469
+Ä
+Pmanagement/src/main/java/com/fseg/management/services/impls/ReactServiceImp.java,a/e/ae24d9c6f53be23156fe1e75ae7ccf197430f0c6
+É
+Smanagement/src/main/java/com/fseg/management/services/impls/CommentServiceImpl.java,f/3/f3f2e20e0c27ab392fa906de960d2a26c46c5da6
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+Å
+Qmanagement/src/main/java/com/fseg/management/controllers/OperationController.java,1/8/18b1ba597623d567a51e77a49c77314f3894ad8e
+y
+Imanagement/src/main/java/com/fseg/management/security/KeycloakConfig.java,d/f/df125e22597a1963279d7907d5115c756b345b06
+B
+management/pom.xml,3/9/39b65574049114996ea04f4c2a3093c8e6cb7412
+Å
+Qmanagement/src/main/java/com/fseg/management/services/abstracts/ICrudService.java,4/0/40c7e111c79f4d845a47ff45255e7532ccdc1da9
